@@ -6,11 +6,24 @@ const app = express();
 // This^^ isn't doing what I'm trying to do. errors. 
 // ************************************************************************************************
 
-// const contact = require("modules/contact.html");
+
 app.get("/", (req, res) => res.send("Hello, world!"));
+// This is the home route. 
 
 app.get("/contact", (req, res) => res.send('Hello contact'));
 // app.get("/contact", (req, res) => res.render("./modules/contact"));
+
+
+app.get("/:username/messages", (req, res) => {
+    console.log(req.params);
+    res.end();
+})
+// If we visit: http://localhost:3000/Odin/messages
+// express will log username: Odin
+// We are using the request's paramaters to store information
+
+
+
 
 const PORT = 3000;
 app.listen(PORT, () => console.log(`My first Express app - listening on port ${PORT}!`));
