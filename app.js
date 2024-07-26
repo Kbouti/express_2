@@ -14,13 +14,25 @@ app.get("/contact", (req, res) => res.send('Hello contact'));
 // app.get("/contact", (req, res) => res.render("./modules/contact"));
 
 
-app.get("/:username/messages", (req, res) => {
-    console.log(req.params);
-    res.end();
-})
+// app.get("/:username/messages", (req, res) => {
+//     console.log(req.params);
+//     res.end();
+// })
 // If we visit: http://localhost:3000/Odin/messages
 // express will log username: Odin
 // We are using the request's paramaters to store information
+
+
+
+app.get("/:username/messages", (req, res) => {
+    console.log("Params:", req.params);
+    console.log("Query:", req.query);
+    res.end();
+  });
+// Next we learn to access query paramaters in the request. These are placed in key value pairs after a ?
+// If we visit: localhost:3000/Odin/messages?sort=date&direction=ascending
+// We now know how to access both route params and query
+
 
 
 
