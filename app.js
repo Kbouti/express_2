@@ -28,8 +28,12 @@ app.use(express.urlencoded({ extended: false }));
 // })
 
 app.get("/", (req, res) => {
-  res.render("index", { message: "EJS rocks!" });
+  res.render("index", { message: "Home" });
 });
+
+app.get("/about", (req, res) => {
+    res.render("about", {message: "About"})
+})
 
 // base mount path is `/users` and will always execute on that specific mount path, and yes including `/users/a/b/c`
 app.use("/users", userRouter);
