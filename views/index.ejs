@@ -9,8 +9,10 @@
   <body>
     <%-include('components/navbar') %>
 
-    <h1><%= message %></h1>
-    <h2>This is the homepage</h2>
+    <%-include('components/header', {
+        title: "Home",
+        subTitle: "This is where we house basic information."
+    }) %>
 
     <section class="sectionContent"></section>
 

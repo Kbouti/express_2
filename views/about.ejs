@@ -8,13 +8,14 @@
   </head>
   <body>
     <%-include('components/navbar') %>
+    
+    <%-include('components/header', {
+            title: "About",
+            subTitle: "You will learn all about the project here."
+         })
+    %>
 
-    <h1><%= message %></h1>
-    <h2>Some interesting things about this page are....</h2>
-
-    <section class="sectionContent">
-        
-    </section>
+    <section class="sectionContent"></section>
 
     <%-include('components/footer') %>
   </body>
