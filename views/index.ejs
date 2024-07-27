@@ -7,12 +7,10 @@
     <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
-    <%= message %> <% const animals = ["Cat", "Dog", "Lemur", "Hawk"] %>
     <%-include('components/navbar') %>
-    <ul>
-      <% animals.map((animal) => { %>
-      <li><%= animal %>s are cute</li>
-      <% }) %>
-    </ul>
+
+    <h1><%= message %> </h1>
+    <h2>This is the homepage</h2>
+
   </body>
 </html>
