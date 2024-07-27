@@ -6,16 +6,13 @@ const userRouter = require("./routes/userRoutes");
 const app = express();
 
 
-
-
-
 const path = require("path");
 
-
+// This tells our app how to access static assets in the public folder. 
 const assetsPath = path.join(__dirname, "public");
 app.use(express.static(assetsPath));
 
-
+// This tells our app to look for views in the view folder. And to use the ejs engine
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
