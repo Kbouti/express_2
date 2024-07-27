@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use((req, res, next) => {
     console.log('Hello from your middleware function! ');
-  // You can of course also create your own for your own use-case!
+  // Our own custom middleware function
   // Just make sure to call `next`
   next();
 })
