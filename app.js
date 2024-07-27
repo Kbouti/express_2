@@ -5,7 +5,16 @@ const userRouter = require("./routes/userRoutes");
 
 const app = express();
 
+
+
+
+
 const path = require("path");
+
+
+const assetsPath = path.join(__dirname, "public");
+app.use(express.static(assetsPath));
+
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
@@ -14,12 +23,12 @@ app.set("view engine", "ejs");
 // parses form payloads and sets it to the `req.body`
 app.use(express.urlencoded({ extended: false }));
 
-app.use((req, res, next) => {
-    console.log('Hello from your middleware function! ');
-  // Our own custom middleware function
-  // Just make sure to call `next`
-  next();
-})
+// app.use((req, res, next) => {
+//     console.log('Hello from your middleware function! ');
+//   // Our own custom middleware function
+//   // Just make sure to call `next`
+//   next();
+// })
 
 app.get("/", (req, res) => {
   res.render("index", { message: "EJS rocks!" });

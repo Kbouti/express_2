@@ -1,17 +1,26 @@
-<html>
-  <body>
-    <%= message %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node Espress_2</title>
+    <link rel="stylesheet" href="../style.css" />
 
+</head>
+<body>
+    <%= message %> <% const animals = ["Cat", "Dog", "Lemur", "Hawk"] %>
 
-
-    <% const animals = ["Cat", "Dog", "Lemur", "Hawk"] %>
-
-    <ul>
+    <ul class="animals">
       <% animals.map((animal) => { %>
-        <li><%= animal %>s are cute</li>
+      <li><%= animal %>s are cute</li>
       <% }) %>
     </ul>
-    
 
-  </body>
+</body>
 </html>
+
+
+
+
+
+
