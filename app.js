@@ -5,8 +5,11 @@ const userRouter = require('./routes/userRoutes');
 
 const app = express();
 
-// application-level middlewares, will always execute on every incoming requests
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "ejs");
 
+
+// application-level middlewares, will always execute on every incoming requests
 // parses form payloads and sets it to the `req.body`
 app.use(express.urlencoded({ extended: false }));
 
