@@ -1,26 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Node Espress_2</title>
     <link rel="stylesheet" href="../style.css" />
-
-</head>
-<body>
+  </head>
+  <body>
     <%= message %> <% const animals = ["Cat", "Dog", "Lemur", "Hawk"] %>
-
+    <%-include('components/navbar') %>
     <ul>
       <% animals.map((animal) => { %>
       <li><%= animal %>s are cute</li>
       <% }) %>
     </ul>
-
-</body>
+  </body>
 </html>
-
-
-
-
-
-
