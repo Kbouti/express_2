@@ -1,4 +1,24 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   color: black;
   background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.sectionContent {
+  flex-grow: 1;
+}
+
+footer {
+  align-items: center;
+  align-self: center;
+  justify-items: flex-end;
+  /* margin-top: 100%; */
 }
